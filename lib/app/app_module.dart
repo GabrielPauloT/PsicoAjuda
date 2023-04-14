@@ -1,6 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:psicoajuda/app/modules/home/home_module.dart';
-import 'package:psicoajuda/app/modules/login/login_screen_module.dart';
+import 'package:psicoajuda/app/modules/module_route.dart';
 
 class AppModule extends Module {
   @override
@@ -10,6 +9,7 @@ class AppModule extends Module {
   final List<ModularRoute> routes = [
     ModuleRoute('/', module: LoginModule()),
     ModuleRoute('/home', module: HomeModule()),
+    ModuleRoute('/profile', module: ProfileModule()),
   ];
 
 }
