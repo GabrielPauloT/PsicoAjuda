@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -5,30 +6,59 @@ import 'package:flutter_modular/flutter_modular.dart';
 const users = {
   'psicoajuda@gmail.com': '123456',
   'isaac@gmail.com': '123456',
-  'gabriel@gmail.com': '123456',
+  // 'gabriel@gmail.com': '123456',
 };
 
 class LoginScreenPage extends StatelessWidget {
   Duration get loginTime => const Duration(milliseconds: 2250);
   const LoginScreenPage({Key? key}) : super(key: key);
 
-  Future<String?> _authUser(LoginData data) {
-    debugPrint('Name: ${data.name}, Password: ${data.password}');
-    return Future.delayed(loginTime).then((_) {
-      if (!users.containsKey(data.name)) {
-        return 'Usuario não existe!';
-      }
-      if (users[data.name] != data.password) {
-        return 'Senha incorreta!';
-      }
+  Future<String?> _authUser(LoginData data) async {
+  debugPrint('Signup Name: ${data.name}, Password: ${data.password}');
+  try {
+    final response = await Dio().post(
+      'http://192.168.0.105:3009/user/login',
+      data: {
+        'email': data.name,
+        'password': data.password,
+      },
+    );
+    debugPrint('Signup Name: ${response.data}');
+    if (response.data == "email ou senha incorretos") {
+      return 'Email ou senha incorretos. Tente novamente.';
+    }
+    if (response.data == "usuário não existe") {
+      return 'Usuário não existe. Tente novamente.';
+    } else {
       return null;
-    });
+    }
+  } catch (e) {
+    return "Erro: $e";
   }
+}
 
   Future<String?> _signupUser(SignupData data) {
     debugPrint('Signup Name: ${data.name}, Password: ${data.password}');
-    return Future.delayed(loginTime).then((_) {
-      return null;
+    return Future.delayed(loginTime).then((_) async {
+      try {
+      final response = await Dio().post(
+        'http://192.168.0.105:3009/user/',
+        data: {
+          'email': data.name,
+          'password': data.password,
+        },
+      );
+      debugPrint('Signup Name: ${response.data}');
+      
+      if (response.data == "Usuário já existe") {
+        return 'Usuário já existe. Tente novamente.';
+      }
+      else {
+        return null;
+      }
+    } catch (e) {
+      return "Erro: $e";
+    }
     });
   }
 
@@ -49,6 +79,20 @@ class LoginScreenPage extends StatelessWidget {
       logo: const AssetImage('assets/images/logo/psicoAjuda.png'),
       onLogin: _authUser,
       onSignup: _signupUser,
+      additionalSignupFields:[
+        UserFormField(
+          displayName: 'Nome',
+          keyName: 'Nome',
+          fieldValidator: (value) {
+            if (value == null) {
+              return 'Por favor, informe seu nome';
+            }
+            else {
+              return null;
+            }
+          },
+        )
+      ],
       onSubmitAnimationCompleted: () {
         Modular.to.pushNamed('/home/');
       },

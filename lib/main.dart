@@ -11,4 +11,5 @@ void main() {
       child: const AppWidget(),
     ),
   );
+  // makeRequest();
 }
