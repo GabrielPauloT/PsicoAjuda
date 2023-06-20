@@ -1,2 +1,2 @@
 # PsicoAjuda
-Aplicativo de consulta de psicologo.
+Aplicativo para psicologo.
