@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "983748320031",
+    "project_id": "psicoajuda-3b5e9",
+    "storage_bucket": "psicoajuda-3b5e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983748320031:android:0a365173848ca5fa236e2a",
+        "android_client_info": {
+          "package_name": "com.example.psicoajuda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983748320031-ofoc7855ehs4tjeg6mpbpakp1qusdhve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ig0qEmgBuVH96l39jL9VBRDPzIwOJO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983748320031-ofoc7855ehs4tjeg6mpbpakp1qusdhve.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "983748320031-286pb1cte50vqti8jkvcd5ki6ik9q5u8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.psicoajuda"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983748320031:android:8f172b782ceccfd6236e2a",
+        "android_client_info": {
+          "package_name": "com.projeto.psicoajuda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983748320031-ofoc7855ehs4tjeg6mpbpakp1qusdhve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ig0qEmgBuVH96l39jL9VBRDPzIwOJO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983748320031-ofoc7855ehs4tjeg6mpbpakp1qusdhve.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "983748320031-286pb1cte50vqti8jkvcd5ki6ik9q5u8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.psicoajuda"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

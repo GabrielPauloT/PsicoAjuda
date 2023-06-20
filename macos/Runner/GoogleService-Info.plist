@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>983748320031-286pb1cte50vqti8jkvcd5ki6ik9q5u8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.983748320031-286pb1cte50vqti8jkvcd5ki6ik9q5u8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDyGNqlNJzY1pNxcQnlJ5XuRbLaw36wTYE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>983748320031</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.psicoajuda</string>
+	<key>PROJECT_ID</key>
+	<string>psicoajuda-3b5e9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>psicoajuda-3b5e9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:983748320031:ios:ee60dbcf54d29142236e2a</string>
+</dict>
+</plist>

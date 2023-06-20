@@ -10,6 +10,7 @@ class AppModule extends Module {
     ModuleRoute('/', module: LoginModule()),
     ModuleRoute('/home', module: HomeModule()),
     ModuleRoute('/profile', module: ProfileModule()),
+    ModuleRoute('/chat', module: ChatModule()),
   ];
 
 }
